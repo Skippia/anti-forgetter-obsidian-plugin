@@ -1,0 +1,29 @@
+{
+	"name": "obsidian-sample-plugin",
+	"version": "1.0.0",
+	"description": "This is a sample plugin for Obsidian (https://obsidian.md)",
+	"main": "main.js",
+	"scripts": {
+		"dev": "bun esbuild.config.mjs",
+		"build": "bun esbuild.config.mjs production",
+		"version": "bun version-bump.mjs && git add manifest.json versions.json",
+		"prepare": "husky",
+		"pre-push": "bun tsc --noEmit -skipLibCheck"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/bun": "^1.1.14",
+		"@types/node": "^16.11.6",
+		"@typescript-eslint/eslint-plugin": "5.29.0",
+		"@typescript-eslint/parser": "5.29.0",
+		"builtin-modules": "3.3.0",
+		"esbuild": "0.17.3",
+		"husky": "^9.1.7",
+		"obsidian": "latest",
+		"obsidian-typings": "^2.8.1",
+		"tslib": "2.4.0",
+		"typescript": "4.7.4"
+	}
+}
